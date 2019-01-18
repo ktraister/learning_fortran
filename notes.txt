@@ -1,0 +1,1 @@
+gfortran -std=f95 gravity.f95 -o main
