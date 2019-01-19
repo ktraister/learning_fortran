@@ -1,7 +1,14 @@
+!subroutine input (X)
+!    bits = count(j    
+!    return bits
+!end
+
+
+
 program prime
 implicit none
 
-integer :: num_primes, at, found, i
+integer :: num_primes, at, found, i, bt
 logical :: is_prime
 integer, allocatable, dimension(:) :: primes ! array that will hold the primes
 
@@ -22,7 +29,10 @@ do
     if (is_prime) then
         found = found + 1
         primes(found) = at
-        print *, at
+        bt = count(at, 1)
+        print *, "PRIME: ", at
+        print *, ""
+        print *, "BITS: ", bt
     end if
     at = at + 1
     if (found == num_primes) then ! stop when all primes are found
